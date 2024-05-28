@@ -13,7 +13,7 @@ Virtek is developed in JAVA, using a solid architecture that can be optimised fo
 | Tools	| Tous les outils codes ne pouvant être catégorisés |
 
 
-To date, VirTek is a matching engine, allowing to read a flow of orders (different types of orders taken into account) and to integrate them into an order book according to certain priority rules, to then calculate the execution prices and the Best Bid Offer (BBO). EuriTeK manages two order books: visible and hidden, according to a dichotomy of Buy Order / Put Order. 
+To date, VirTek is a matching engine, allowing to read a flow of orders (different types of orders taken into account) and to integrate them into an order book according to certain priority rules, to then calculate the execution prices and the Best Bid Offer (BBO). Virtek manages two order books: visible and hidden, according to a dichotomy of Buy Order / Put Order. 
 
 # Package OrderBookMgt
 

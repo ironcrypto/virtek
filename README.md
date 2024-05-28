@@ -49,7 +49,6 @@ Methods to be used by the trader are : SendOrder, CancelOrder, ModifyOrder.
 |:-------|:------------------------------------------------------------------------|
 | SendOrder (long idOfTicker, int dirOfOrder, double priceOfOrder, long sizeOfOrder, String typeOfOrder, long idOfTrader) |	Envoi d'un ordre vers une des méthodes suivantes : Classic, Iceberg, Stop, FoK |
 | ClassicOrder (OrderFlow newOrder) |	Sending a Limit, Hit or Market order |
-| IcebergOrder (long idOfTicker, int dirOfOrder, double priceOfOrder, long sizeOfOrder, long sizePerSent, String typeOfOrder, long idOfTrader)
 | IcebergOrder (long idOfTicker, int dirOfOrder, double priceOfOrder, long sizeOfOrder, long sizePerSent, String typeOfOrder, long idOfTrader) | Sending an Iceberg order |
 | StopOrder (long idOfTicker, int dirOfOrder, double priceOfOrder, long hiddenSize, String typeOfOrder, long idOfTrader) |	Sending a stop order |
 | FoKOrder (long idOfTicker, int dirOfOrder, double priceOfOrder, long sizeOfOrder, String typeOfOrder, long idOfTrader) |	Sending a FoK order |

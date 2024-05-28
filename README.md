@@ -111,17 +111,17 @@ The logic of execution is simple:
 
 1. CheckExec checks whether an execution is possible
    
-1.a If so, it proceeds to record the execution and then transforms the order book after execution with the ContExecMarketOrder, ContExecHitOrder and ContExecLimitOrder (Cont for Continuous) methods
+   1.a If so, it proceeds to record the execution and then transforms the order book after execution with the ContExecMarketOrder, ContExecHitOrder and ContExecLimitOrder (Cont for Continuous) methods
 
-1.a.i After execution, the BBO price has been able to change, CheckExec therefore checks whether the hidden order book can be executed: (CheckOffOrderExec method)
+      1.a.i After execution, the BBO price has been able to change, CheckExec therefore checks whether the hidden order book can be executed: (CheckOffOrderExec method)
 
-1.a.i.1 In the event that there is a possible execution, the hidden order is removed from the dark order book to be integrated into the visible order book and take over the same rights as a visible order => resume step 1.a
+         1.a.i.1 In the event that there is a possible execution, the hidden order is removed from the dark order book to be integrated into the visible order book and take over the same rights as a visible order => resume step 1.a
 
-1.a.i.1.a The execution is recorded by the RecordExec method
+            1.a.i.1.a The execution is recorded by the RecordExec method
 
-1.a.ii In the event that an execution is not possible, nothing happens and the hidden order book is not changed.
+      1.a.ii In the event that an execution is not possible, nothing happens and the hidden order book is not changed.
 
-1.b If not, nothing happens and the order book is not changed.
+   1.b If not, nothing happens and the order book is not changed.
   
 => Step 1.a is repeated until 1.b is reached.
 

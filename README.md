@@ -1,7 +1,7 @@
 Description	v1.0
-31/01/2017	S. THOMAS
+S. THOMAS
 
-Virtek est développé en JAVA, sous une architecture solide mais largement optimisable en vue d'un prototypage prochain. Il est organisé autour de cinq packages. 
+Virtek is developed in JAVA, using a solid architecture that can be optimised for prototyping in the near future. It is organised around five packages. 
 
 | Package |	Objective |
 |:-------|:------------------------------------------------------------------------|
@@ -108,9 +108,9 @@ Check Exec for Hidden Order Book
 # Execution Logic
 
 The logic of execution is simple:
-- CheckExec checks whether an execution is possible, 
--- If so, it proceeds to record the execution and then transforms the order book after execution with the ContExecMarketOrder, ContExecHitOrder and ContExecLimitOrder (Cont for Continuous) methods. 
----	After execution, the BBO price has been able to change, CheckExec therefore checks whether the hidden order book can be executed: (CheckOffOrderExec method), 
+1. CheckExec checks whether an execution is possible, 
+* If so, it proceeds to record the execution and then transforms the order book after execution with the ContExecMarketOrder, ContExecHitOrder and ContExecLimitOrder (Cont for Continuous) methods. 
+** After execution, the BBO price has been able to change, CheckExec therefore checks whether the hidden order book can be executed: (CheckOffOrderExec method), 
 ---- In the event that there is a possible execution, the hidden order is removed from the dark order book to be integrated into the visible order book and take over the same rights as a visible order => resume step 1.a
 ----- The execution is recorded by the RecordExec method
 ---- In the event that an execution is not possible, nothing happens and the hidden order book is not changed.

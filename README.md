@@ -53,7 +53,7 @@ Methods to be used by the trader are : SendOrder, CancelOrder, ModifyOrder.
 | StopOrder (long idOfTicker, int dirOfOrder, double priceOfOrder, long hiddenSize, String typeOfOrder, long idOfTrader) |	Sending a stop order |
 | FoKOrder (long idOfTicker, int dirOfOrder, double priceOfOrder, long sizeOfOrder, String typeOfOrder, long idOfTrader) |	Sending a FoK order |
 | CancelOrder (long idOfOrder, long idOfTrader) |	Sending a Cancel order |
-| ModifyOrder | (long idOfOrder, int newDir, double newPrice, long newSize, String newTypeOfOrder, long idOfTrader)	| Sending a Modify order |
+| ModifyOrder (long idOfOrder, int newDir, double newPrice, long newSize, String newTypeOfOrder, long idOfTrader)	| Sending a Modify order |
 
 
 

@@ -108,6 +108,7 @@ Check Exec for Hidden Order Book
 
 The logic of execution is simple:
 
+```
 1. CheckExec checks whether an execution is possible
    
 -> 1.a If so, it proceeds to record the execution and then transforms the order book after execution with the ContExecMarketOrder, ContExecHitOrder and ContExecLimitOrder (Cont for Continuous) methods
@@ -121,8 +122,9 @@ The logic of execution is simple:
 ---> 1.a.ii In the event that an execution is not possible, nothing happens and the hidden order book is not changed.
 
 -> 1.b If not, nothing happens and the order book is not changed.
+```
   
-**&rarr** Step 1.a is repeated until 1.b is reached.
+**&rarr;** Step 1.a is repeated until 1.b is reached.
 
 **Note**: When an order status is changed or after any partial or complete execution, the order status of the OrderFlow is also changed. You need to create a notification for users through a dataFeedListener. 
 

@@ -1,19 +1,19 @@
 Description	v1.0
 S. THOMAS
 
-Virtek is developed in JAVA, using a solid architecture that can be optimised for prototyping in the near future. It is organised around five packages. 
+VirTek is a pet project developed in JAVA, using a solid architecture that can be optimised for prototyping in the near future. It is organised around five packages. 
 
 | Package |	Objective |
 |:-------|:------------------------------------------------------------------------|
 | BatchAuction	| Test universe to simulate a market at the fix. This package will then be integrated into the OrderBookMgt package|
-| DataMgt	| VirTeK data-to-data transformer |
-| MarketPlaceMgt	| VirTeK's market settings, players, securities and orders |
+| DataMgt	| VirTek data-to-data transformer |
+| MarketPlaceMgt	| VirTek's market settings, players, securities and orders |
 | OrderBookMgt	| Order book management universe |
 | TestCode	| Trading Test Universe |
 | Tools	| All code tools that cannot be categorised |
 
 
-To date, VirTek is a matching engine, allowing to read a flow of orders (different types of orders taken into account) and to integrate them into an order book according to certain priority rules, to then calculate the execution prices and the Best Bid Offer (BBO). Virtek manages two order books: visible and hidden, according to a dichotomy of Buy Order / Put Order. 
+To date, VirTek is a matching engine, allowing to read a flow of orders (different types of orders taken into account) and to integrate them into an order book according to certain priority rules, to then calculate the execution prices and the Best Bid Offer (BBO). VirTek manages two order books: visible and hidden, according to a dichotomy of Buy Order / Put Order. 
 
 # Package OrderBookMgt
 
@@ -41,7 +41,7 @@ DisplayInformation is a class that does not allow direct interaction with the ma
 
  
 # Package OrderFlow
-OrderFlow is the central class of Virtek's operation, it is the place where the order flow is transferred. The trader can only use three methods, the tool then organizes the correct routing of the order. It is the only place where he will be able to communicate with the financial market. 
+OrderFlow is the central class of VirTek's operation, it is the place where the order flow is transferred. The trader can only use three methods, the tool then organizes the correct routing of the order. It is the only place where he will be able to communicate with the financial market. 
 
 Methods to be used by the trader are : ```SendOrder```, ```CancelOrder```, ```ModifyOrder```. 
 
@@ -92,8 +92,6 @@ _Order Book Priority Rules_
 # Package Execution
 Once it has entered the right side of the right book, VirTek tests the possibility of execution.
 
-Check Exec for Hidden Order Book
-
 | Method | Objective |
 |:-------|:------------------------------------------------------------------------|
 | CheckExec (OrderBook ob, int orderType) | Check for a possible match: and send to an execution depending on the order type | 
@@ -127,4 +125,7 @@ The logic of execution is simple:
 **&rarr;** Step 1.a is repeated until 1.b is reached.
 
 **Note**: When an order status is changed or after any partial or complete execution, the order status of the ```OrderFlow``` is also changed. You need to create a notification for users through a ```dataFeedListener```. 
+
+# To Be Continued...
+
 

@@ -10,14 +10,14 @@ Virtek is developed in JAVA, using a solid architecture that can be optimised fo
 | MarketPlaceMgt	| VirTeK's market settings, players, securities and orders |
 | OrderBookMgt	| Order book management universe |
 | TestCode	| Trading Test Universe |
-| Tools	| Tous les outils codes ne pouvant être catégorisés |
+| Tools	| All code tools that cannot be categorised |
 
 
 To date, VirTek is a matching engine, allowing to read a flow of orders (different types of orders taken into account) and to integrate them into an order book according to certain priority rules, to then calculate the execution prices and the Best Bid Offer (BBO). Virtek manages two order books: visible and hidden, according to a dichotomy of Buy Order / Put Order. 
 
 # Package OrderBookMgt
 
-A user (virtual trader or researcher) only has access to a few methods, and can only communicate with one package: OrderBookMgt. In addition, they can only access two classes: DisplayInformation and OrderFlow. 
+A user (virtual trader or researcher) only has access to a few methods, and can only communicate with one package: ```OrderBookMgt```. In addition, they can only access two classes: ```DisplayInformation``` and ```OrderFlow```. 
 
 | Class | Objective |
 |:-------|:------------------------------------------------------------------------|
@@ -31,7 +31,7 @@ A user (virtual trader or researcher) only has access to a few methods, and can 
 | OrderSellSide	| The visible Ask order book |
 | TestEnvironment	| Test trading platform |
 
-DisplayInformation is a class that does not allow direct interaction with the market. It discloses the market information available to the trader via three methods: GetBBO, GetLastInformation, GetVisibleOB. 
+DisplayInformation is a class that does not allow direct interaction with the market. It discloses the market information available to the trader via three methods: ```GetBBO```, ```GetLastInformation```, ```GetVisibleOB```. 
 
 | Method | Objective |
 |:-------|:------------------------------------------------------------------------|
@@ -43,7 +43,7 @@ DisplayInformation is a class that does not allow direct interaction with the ma
 # Package OrderFlow
 OrderFlow is the central class of Virtek's operation, it is the place where the order flow is transferred. The trader can only use three methods, the tool then organizes the correct routing of the order. It is the only place where he will be able to communicate with the financial market. 
 
-Methods to be used by the trader are : SendOrder, CancelOrder, ModifyOrder. 
+Methods to be used by the trader are : ```SendOrder```, ```CancelOrder```, ```ModifyOrder```. 
 
 | Method | Objective |
 |:-------|:------------------------------------------------------------------------|
@@ -57,7 +57,7 @@ Methods to be used by the trader are : SendOrder, CancelOrder, ModifyOrder.
 
 
 
-Once the order is sent, the trader receives the OrderFlow object, which returns all the characteristics of his order: 
+Once the order is sent, the trader receives the ```OrderFlow``` object, which returns all the characteristics of his order: 
 - long idOfTicker 
 - int dirOfOrder
 - double priceOfOrder
@@ -126,5 +126,5 @@ The logic of execution is simple:
   
 **&rarr;** Step 1.a is repeated until 1.b is reached.
 
-**Note**: When an order status is changed or after any partial or complete execution, the order status of the OrderFlow is also changed. You need to create a notification for users through a dataFeedListener. 
+**Note**: When an order status is changed or after any partial or complete execution, the order status of the ```OrderFlow``` is also changed. You need to create a notification for users through a ```dataFeedListener```. 
 

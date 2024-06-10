@@ -1,4 +1,4 @@
-Description	v1.0
+Description	v1.0 - Built in collab with Thomas Thouillez.
 
 VirTek is a pet project developed in JAVA, using a solid architecture that can be optimised for prototyping in the near future. It is organised around five packages. 
 
